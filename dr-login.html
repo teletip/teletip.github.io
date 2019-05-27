@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>teleTIP  |  Online Doktor Hizmeti</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Boostrap/css/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="Boostrap/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="Boostrap/js/bootstrap.min.js"></script>
+    <script src="jquery.js"></script>
+    <link href="css/mainCss.css" rel="stylesheet" />
+    <script src="jquery.js"></script>
+    <script src="peer.js"></script>
+    <script src="socket.io.js"></script>
+
+
+</head>
+<body>
+
+
+    <div class="side" id="side">
+        <div class="side-img">
+            <img id="side-img" src="images/on-doc.png" />
+        </div>
+        <a href="javascript:" id="kapat" class="kapat" onclick="kapat()">&times;</a>
+
+        <ul id="ulUser" onclick="kapat();"></ul>
+        <!--Video Elementleri-->
+
+        
+
+    </div>
+
+    <div id="menu">
+        <img id="menu-icon" style="cursor:pointer; position:fixed;"  onclick="ac();" src="images/doctor-btn.png" />
+    </div>
+    <br>
+    <br>
+    <div id="login-form" class="container-fluid">
+        <div class="row">
+            <div class="col text-center">
+                <div class="col-md-4 float-left mt-5"></div>
+                <div class="col-md-4 float-left mt-5">
+                        <img src="images/on-doc.png" style="width: 200px">
+                        
+                        <div class="col-md-12 mt-3 text-center">
+                            <input type="text" class="form-control"id="txtUsername" placeholder="Doktor girişi">
+                            
+                            <button class="lgn-btn btn  pl-5 pr-5 mt-3" id="btnSingUp">Giriş</button>
+                        </div>
+                        
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    
+    
+
+        <div id="menu1" class="col  mt-5">
+            <div id="div-chat">
+
+
+                <!--<video class="mt-5" id="localStream" width="300" controls autoplay="autoplay"></video>-->
+                <br /><br />
+
+                <!--<video class="mt-5" id="remoteStream" width="300" controls autoplay="autoplay"></video>-->
+                <!--Test Video Element-->
+                <div class="container">
+                    <div class="mt-5">
+                        <video autoplay id="remoteStream"></video>
+
+                        <div class="content">
+                            <div class="container-fluid">
+                                <img class="img-fluid float-left fixed-bottom" src="images/logo5.png" />
+                                <video muted id="localStream" class="fixed-top" width="240" height="180"></video>
+                            </div>
+                            
+    
+                        </div>
+                    </div>
+                </div>
+                      
+                
+
+                <!--Test Video Element-->
+
+                <br /><br />
+                <!--Arama Buttonları-->
+
+                
+
+            </div>
+            <div>
+
+                <br><br>
+
+            </div>
+
+
+        </div>
+
+
+        
+
+
+
+        <script>
+            
+                // Get the video
+            var video = document.getElementById("remoteStream");
+                // Get the button
+            var btn = document.getElementById("myBtn");
+            
+               
+            function ac() {
+
+
+
+document.getElementById("side").style.width = "250px";
+document.getElementById("menu").style.marginLeft = "250px";
+document.getElementById("menu1").style.marginLeft = "250px";
+
+$(document).ready(function () {
+    
+
+    
+
+
+});
+
+
+if (document.getElementById("side").style.width == "250px") {
+    $('#menu-icon').hide();
+    $('#kapat').show();
+
+}
+
+};
+        
+            
+function kapat() {
+            document.getElementById("side").style.width = "0";
+            document.getElementById("menu").style.marginLeft = "0";
+            document.getElementById("menu1").style.marginLeft = "0";
+            $('#menu-icon').show();
+            $('#kapat').hide();
+
+        }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+
+</body>
+
+</html>

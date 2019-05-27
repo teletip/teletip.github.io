@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Peer/jquery.js"></script>
+    <script src="Peer/peer.js"></script>
+    <script src="Peer/socket.io.js"></script>
+    
+    <link href="PeerCss/bootstrap.min.css" rel="stylesheet">
+    <link href="PeerCss/maincss.css" rel="stylesheet" />
+
+    <title>TeleTIP  |  Online Temel Sağlık Hizmeti</title>
+
+</head>
+<body>
+    <!--Chat list-->
+    <div id="div-chat">
+            <h2>Online Kullanıcılar</h2>
+            <ul id="ulUser">
+    
+            </ul>
+            <!--Video Elementleri-->
+            <h3 id="myPeer">ID :</h3>
+            <video id="localStream" width="300" controls></video>
+            <br /><br />
+            <video id="remoteStream" width="300" controls></video>
+            <br /><br />
+    
+            <!--Arama Buttonları-->
+            
+            <input type="text" id="remoteId" placeholder="Remote ID">
+            <button id="btnCall">Ara</button>
+            </div>
+
+    
+    <div id="div-btn" class="col-md text-center">
+        <br><br><br>
+        <img  src="images/on-doc.png">
+        <br>
+    </div>
+    <div id="div-btn" class="col-md text-center">
+            <br>
+            <div class="col-md-4 float-left">.</div>
+            <div class="col-md-4 float-left">
+                    <div class="form-group">
+                            <label for="usr">Name:</label>
+                            <input type="text" id="txtUsername" class="form-control" placeholder="Kullanıcı Adı Girin">
+                          </div>
+                    
+                            <button id="btnSingUp" class="button" style="vertical-align:middle"><span>Giriş</span>></button>
+                          
+            </div>
+            <div class="col-md-4 float-left"></div>
+        </div>
+    
+    
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="Peer/main.js"></script>
+</body>
+</html>
